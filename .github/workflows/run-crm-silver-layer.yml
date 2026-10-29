@@ -1,11 +1,17 @@
+
 name: Run CRM Silver Layer
 
 on:
   schedule:
-    # Run every hour at minute 0 (UTC)
-    - cron: "0 * * * *"
+    # Every day at 9:00 AM IST
+    - cron: "0 9 * * *"
+      timezone: "Asia/Kolkata"
 
-  # Allows you to run it manually for testing
+    # Every day at 7:00 PM IST
+    - cron: "0 19 * * *"
+      timezone: "Asia/Kolkata"
+
+  # Allows manual testing
   workflow_dispatch:
 
 permissions:
@@ -40,5 +46,4 @@ jobs:
             --execute \
             --ExecutePreprocessor.timeout=3600 \
             --output executed.ipynb \
-            --inplace \
             GitHub_crm_leads_mview_silver_layer.ipynb
