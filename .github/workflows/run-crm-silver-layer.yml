@@ -41,4 +41,4 @@ jobs:
             --ExecutePreprocessor.timeout=3600 \
             --output executed.ipynb \
             --inplace \
-            crm_leads_mview_silver_layer.ipynb
+            GitHub_crm_leads_mview_silver_layer.ipynb
