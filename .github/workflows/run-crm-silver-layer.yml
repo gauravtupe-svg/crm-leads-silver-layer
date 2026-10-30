@@ -4,12 +4,12 @@ name: Run CRM Silver Layer
 on:
   schedule:
     # Every day at 9:00 AM IST
-    - cron: "0 9 * * *"
-      timezone: "Asia/Kolkata"
+    - cron: "30 3 * * *"
+      # timezone: "Asia/Kolkata"
 
     # Every day at 7:00 PM IST
-    - cron: "0 19 * * *"
-      timezone: "Asia/Kolkata"
+    - cron: "30 13 * * *"
+      # timezone: "Asia/Kolkata"
 
   # Allows manual testing
   workflow_dispatch:
